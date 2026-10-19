@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TryOut STIS - SIGMORA</title>
+<title>TryOut STAN - SIGMORA</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -178,8 +178,8 @@
   <!-- KONTEN -->
   <div class="container">
     <div class="page-title">
-      <h1>TryOut STIS</h1>
-      <p>Pilih paket simulasi ujian TPA dan TBI untuk persiapan masuk Politeknik Statistika STIS.</p>
+      <h1>TryOut STAN</h1>
+      <p>Pilih paket simulasi ujian TPA dan TBI untuk persiapan masuk PKN STAN.</p>
       
       <!-- TOMBOL NAVIGASI CEPAT -->
       <div class="nav-cepat">
@@ -307,15 +307,15 @@
 
       // Background
       const bgImages = [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop", // Statistika
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop",
         "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop"
       ];
 
-      let kodeTersimpan = JSON.parse(localStorage.getItem('kodeAksesSTIS') || '{}');
-      let kodeTerpakai = JSON.parse(localStorage.getItem('kodeTerpakaiSTIS') || '[]');
+      let kodeTersimpan = JSON.parse(localStorage.getItem('kodeAksesSTAN') || '{}');
+      let kodeTerpakai = JSON.parse(localStorage.getItem('kodeTerpakaiSTAN') || '[]');
 
       function renderCards(container, type, count, linkData, kodeData) {
         container.innerHTML = '';
@@ -383,10 +383,10 @@
           }
 
           kodeTersimpan[paketKey] = input;
-          localStorage.setItem('kodeAksesSTIS', JSON.stringify(kodeTersimpan));
+          localStorage.setItem('kodeAksesSTAN', JSON.stringify(kodeTersimpan));
           
           kodeTerpakai.push(input);
-          localStorage.setItem('kodeTerpakaiSTIS', JSON.stringify(kodeTerpakai));
+          localStorage.setItem('kodeTerpakaiSTAN', JSON.stringify(kodeTerpakai));
           
           alert('✅ Kode Benar! TryOut Terbuka.');
           
